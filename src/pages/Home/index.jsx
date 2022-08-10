@@ -1,11 +1,9 @@
 const Home = () => {
     return (
-        <div class="app-main-note-preview">
+        <div class="page-content">
             <h1 class="preview-title">Homepage</h1>
             <div class="markdown-preview">
-                <h3 id="confiezvosrvesdesexpertsduweb">
-                    Confiez vos rêves à des experts du Web
-                </h3>
+                <h3>Confiez vos rêves à des experts du Web</h3>
                 <p>
                     Grâce à notre savoir-faire, notre expérience et notre
                     écoute, nous accompagnons nos clients dans la création de

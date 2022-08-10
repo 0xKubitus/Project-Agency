@@ -1,9 +1,9 @@
 const About = () => {
     return (
-        <div class="app-main-note-preview">
+        <div class="page-content">
             <h1 class="preview-title">About</h1>
             <div class="markdown-preview">
-                <h3 id="websiticestuneagencedecommunicationdigitaleparisayantpourmissiondevousaccompagnersurvosprojetsdigitaux">
+                <h3>
                     Websitic est une Agence de communication digitale à paris
                     ayant pour mission de vous accompagner sur vos projets
                     digitaux.

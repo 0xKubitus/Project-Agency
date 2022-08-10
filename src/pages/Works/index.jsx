@@ -1,9 +1,9 @@
 const Works = () => {
     return (
-        <div class="app-main-note-preview">
+        <div class="page-content">
             <h1 class="preview-title">Works</h1>
             <div class="markdown-preview">
-                <h3 id="aufildesannesnousavonspuaccompagnerlesmeilleurs">
+                <h3>
                     Au fil des années, nous avons pu accompagner les meilleurs.
                 </h3>
                 <p>
