@@ -7,18 +7,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-button {
-    border: 2px solid white;
-    background-color: darkblue;
-}
-
 a {
-    color: antiquewhite;
-}
-
-.dark-mode {
-    background-color: black;
-    color: white;
+    color: orange;
+    font-weight: bold;
 }
 
 .App {
@@ -30,7 +21,7 @@ a {
 .navbar {
     display: flex;
     justify-content: space-around;
-    background-color: darkblue;
+    background-color: lightblue;
     margin: 2px 2px 2px 2px;
 }
 
