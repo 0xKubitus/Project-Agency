@@ -1,11 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
+
+import Home from 'pages/Home';
+import About from 'pages/About';
+import Works from 'pages/Works';
 
 const Header = () => {
     return (
         <nav className="navbar">
-            <p>Lien 1</p>
-            <p>Lien 2</p>
-            <p>Lien 3</p>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/works">Works</Link>
+
+            <button>☀️</button>
+            <button>🌒</button>
         </nav>
     );
 };

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 import Header from './Header';
 import Home from 'pages/Home';
@@ -7,12 +7,14 @@ import Works from 'pages/Works';
 
 function App() {
     return (
-        <div className="App">
+        <BrowserRouter>
             <Header />
-            <Home />
-            <About />
-            <Works />
-        </div>
+            <div className="App">
+                <Home />
+                <About />
+                <Works />
+            </div>
+        </BrowserRouter>
     );
 }
 
