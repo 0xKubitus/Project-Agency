@@ -16,6 +16,11 @@ a {
     color: antiquewhite;
 }
 
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
 .App {
     text-align: center;
     border: 1px solid black;
