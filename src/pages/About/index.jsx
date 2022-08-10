@@ -1,8 +1,8 @@
 const About = () => {
     return (
-        <div class="page-content">
-            <h1 class="preview-title">About</h1>
-            <div class="markdown-preview">
+        <div className="page-content">
+            <h1 className="preview-title">About</h1>
+            <div className="markdown-preview">
                 <h3>
                     Websitic est une Agence de communication digitale à paris
                     ayant pour mission de vous accompagner sur vos projets

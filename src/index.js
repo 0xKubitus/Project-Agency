@@ -9,7 +9,7 @@ import Works from 'pages/Works';
 
 import { ThemeProvider } from 'context/ThemeContext';
 
-import './style.css';
+import 'styles/GlobalStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

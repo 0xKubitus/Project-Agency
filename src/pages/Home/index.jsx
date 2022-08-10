@@ -1,8 +1,8 @@
 const Home = () => {
     return (
-        <div class="page-content">
-            <h1 class="preview-title">Homepage</h1>
-            <div class="markdown-preview">
+        <div className="page-content">
+            <h1 className="preview-title">Homepage</h1>
+            <div className="markdown-preview">
                 <h3>Confiez vos rêves à des experts du Web</h3>
                 <p>
                     Grâce à notre savoir-faire, notre expérience et notre

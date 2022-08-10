@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+import { ThemeContext } from 'context/ThemeContext';
 import styled from 'styled-components';
 
 const ThemeModeBtnContainer = styled.div`
@@ -8,15 +10,20 @@ const ThemeModeBtnContainer = styled.div`
 `;
 
 const ColorThemeButton = styled.button`
+    cursor: pointer;
     border: none;
     color: orange;
     background-color: transparent;
 `;
 
 function ChangeThemeButton() {
+    const { toggleTheme, theme } = useContext(ThemeContext);
+
     return (
         <ThemeModeBtnContainer>
-            <ColorThemeButton>dark:🌒 light:☀️</ColorThemeButton>
+            <ColorThemeButton onClick={() => toggleTheme()}>
+                Change mode : {theme === 'light' ? '☀️' : '🌒'}
+            </ColorThemeButton>
         </ThemeModeBtnContainer>
     );
 }

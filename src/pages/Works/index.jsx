@@ -1,8 +1,8 @@
 const Works = () => {
     return (
-        <div class="page-content">
-            <h1 class="preview-title">Works</h1>
-            <div class="markdown-preview">
+        <div className="page-content">
+            <h1 className="preview-title">Works</h1>
+            <div className="markdown-preview">
                 <h3>
                     Au fil des années, nous avons pu accompagner les meilleurs.
                 </h3>
