@@ -9,13 +9,14 @@ import Works from 'pages/Works';
 
 import { ThemeProvider } from 'context/ThemeContext';
 
-import 'styles/GlobalStyle';
+import GlobalStyle from 'styles/GlobalStyle';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider>
+                <GlobalStyle />
                 <Header />
                 <div className="App">
                     <Routes>
