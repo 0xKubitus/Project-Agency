@@ -26,6 +26,7 @@ const StyledGlobalStyle = createGlobalStyle`
         text-align: center;
         border: 1px solid black;
         margin: 2px 2px 2px 2px;
+        color: ${({ isDarkMode }) => (isDarkMode ? 'white' : 'black')};
     }
 
     .navbar {
