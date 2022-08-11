@@ -11,7 +11,11 @@ const Works = () => {
                     lancer vos marques préférées.
                 </p>
             </div>
-            <h2>AJOUTER ETUDES DE CAS CI-DESSOUS :</h2>
+
+            <div className="">
+                <h2>AJOUTER ETUDES DE CAS CI-DESSOUS :</h2>
+                <div className="works-cards"></div>
+            </div>
         </div>
     );
 };
