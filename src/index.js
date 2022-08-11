@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import Header from "components/Header";
 import Home from "pages/Home";
@@ -22,7 +22,7 @@ root.render(
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/works" element={<Works />}></Route>
+                        <Route path="/works/" element={<Works />} />
                     </Routes>
                 </div>
             </ThemeProvider>

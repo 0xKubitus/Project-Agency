@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
+import Project from "components/Project";
 
 // import Showdown from "showdown";
 // const converter = new Showdown.Converter();
@@ -10,9 +11,14 @@ import { Link } from "react-router-dom";
 const DisplayCaseStudies = (props) => {
     return (
         <div>
-            <Link to={`/project/${props.name}`}>
+            <Routes>
+                <Route path={`/project/${props.name}`} element={<Project />} />
+            </Routes>
+
+            {/* <Link to={`/project/${props.name}`}>
                 {props.name} (lien à cliquer)
-            </Link>
+            </Link> */}
+
             {/* <h2>{props.subtitle}</h2>
             <p>{props.text}</p> */}
         </div>
