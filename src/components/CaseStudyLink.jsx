@@ -11,16 +11,17 @@ import Project from "components/Project";
 const DisplayCaseStudies = (props) => {
     return (
         <div>
-            <Routes>
-                <Route path={`/project/${props.name}`} element={<Project />} />
-            </Routes>
+            {/* <Routes>
+                <Route path="project/:projectName" element={<Project />} />
+            </Routes> */}
 
             {/* <Link to={`/project/${props.name}`}>
                 {props.name} (lien à cliquer)
             </Link> */}
 
-            {/* <h2>{props.subtitle}</h2>
-            <p>{props.text}</p> */}
+            <h1>{props.name}</h1>
+            <h2>{props.subtitle}</h2>
+            <p>{props.text}</p>
         </div>
     );
 };
