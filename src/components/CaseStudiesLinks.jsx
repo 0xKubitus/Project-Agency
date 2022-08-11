@@ -11,7 +11,7 @@ const CaseStudiesLinks = (props) => {
     return (
         <div>
             <h1>{props.name}</h1>
-            <h3>{props.subtitle}</h3>
+            <h2>{props.subtitle}</h2>
             <p>{props.text}</p>
         </div>
     );

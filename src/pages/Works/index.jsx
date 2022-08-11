@@ -1,12 +1,17 @@
 import caseStudies from "data/caseStudies";
 import CaseStudiesLinks from "components/CaseStudiesLinks";
 
-const casesElements = caseStudies.map((casestudy) => {
-    return <p>{casestudy.name}</p>;
-});
-
 const Works = () => {
-    // <CaseStudiesLinks name={case.name} subtitle={case.subtitle} text={case.text} />(case))}
+    const casesElements = caseStudies.map((casestudy) => {
+        // return <p>{casestudy.name}</p>;
+        return (
+            <CaseStudiesLinks
+                name={casestudy.name}
+                subtitle={casestudy.subtitle}
+                text={casestudy.text}
+            />
+        );
+    });
 
     return (
         <div className="page-content">
@@ -21,10 +26,7 @@ const Works = () => {
                 </p>
             </div>
 
-            <div className="">
-                <h3>AJOUTER ETUDES DE CAS CI-DESSOUS :</h3>
-                {casesElements}
-            </div>
+            <div className="cases-elements">{casesElements}</div>
         </div>
     );
 };
