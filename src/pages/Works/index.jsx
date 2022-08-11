@@ -1,3 +1,12 @@
+import Showdown from "showdown";
+import caseStudies from "data/caseStudies";
+
+const converter = new Showdown.Converter();
+
+function createMarkup(caseStudy) {
+    return { __html: converter.makeHtml(caseStudy.subtitle) };
+}
+
 const Works = () => {
     return (
         <div className="page-content">
@@ -14,7 +23,10 @@ const Works = () => {
 
             <div className="">
                 <h2>AJOUTER ETUDES DE CAS CI-DESSOUS :</h2>
-                <div className="works-cards"></div>
+                <div className="works-cards">
+                    {caseStudies.map(createMarkup())}{" "}
+                    {/* IL Y A UN SOUCI SUR MA FONCTION MAP ET SA CALLBACK */}
+                </div>
             </div>
         </div>
     );
