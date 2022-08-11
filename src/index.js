@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from 'components/Header';
-import Home from 'pages/Home';
-import About from 'pages/About';
-import Works from 'pages/Works';
+import Header from "components/Header";
+import Home from "pages/Home";
+import About from "pages/About";
+import Works from "pages/Works";
 
-import { ThemeProvider } from 'context/ThemeContext';
+import { ThemeProvider } from "context/ThemeContext";
 
-import GlobalStyle from 'styles/GlobalStyle';
+import GlobalStyle from "styles/GlobalStyle";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
@@ -22,7 +22,7 @@ root.render(
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/works" element={<Works />} />
+                        <Route path="/works" element={<Works />}></Route>
                     </Routes>
                 </div>
             </ThemeProvider>

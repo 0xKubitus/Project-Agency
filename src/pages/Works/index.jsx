@@ -1,11 +1,10 @@
 import caseStudies from "data/caseStudies";
-import CaseStudiesLinks from "components/CaseStudiesLinks";
+import CaseStudyLink from "components/CaseStudyLink";
 
 const Works = () => {
     const casesElements = caseStudies.map((casestudy) => {
-        // return <p>{casestudy.name}</p>;
         return (
-            <CaseStudiesLinks
+            <CaseStudyLink
                 name={casestudy.name}
                 subtitle={casestudy.subtitle}
                 text={casestudy.text}
@@ -26,7 +25,7 @@ const Works = () => {
                 </p>
             </div>
 
-            <div className="cases-elements">{casesElements}</div>
+            <div className="case-studies-links">{casesElements}</div>
         </div>
     );
 };
