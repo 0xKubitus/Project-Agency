@@ -1,8 +1,20 @@
+import { useState, useEffect } from "react";
+import { useParams, Outlet } from "react-router-dom";
 import caseStudies from "data/caseStudies";
 import CaseStudyLink from "components/CaseStudyLink";
 import Project from "components/Project";
 
 const Works = () => {
+    const { workName } = useParams();
+    const [currentProject, setCurrentProject] = useState("Platon");
+
+    useEffect(() => {
+        const projectToDisplay = caseStudies.find(
+            (project) => project.name === workName
+        );
+        setCurrentProject(projectToDisplay);
+    }, [workName]);
+
     const casesElements = caseStudies.map((casestudy) => {
         return (
             <CaseStudyLink
@@ -29,7 +41,7 @@ const Works = () => {
 
             <div className="case-studies-links">{casesElements}</div>
 
-            <Project />
+            <Outlet currentProject={currentProject} />
         </div>
     );
 };
