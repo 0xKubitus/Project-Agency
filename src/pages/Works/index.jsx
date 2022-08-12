@@ -1,8 +1,34 @@
+import { Link, Outlet } from "react-router-dom";
+
+const Works = ({ caseStudies }) => {
+    return (
+        //  DOIT AFFICHER UN LIEN VERS CHAQUE 'CASE STUDY'
+        // cf. => <CaseStudyLink />
+        <>
+            <ul>
+                {caseStudies.map((project) => (
+                    <li key={project.name}>
+                        <Link to={project.name}>
+                            {project.name} (lien à cliquer)
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            {/* QUAND ON CLICK UN LIEN, DOIT AFFICHER LE CONTENU DU CASE STUDY EN QUESTION
+                 => <Project /> */}
+            <Outlet />
+        </>
+    );
+};
+
+export default Works;
+/*
+============================================================================
 import { useState, useEffect } from "react";
 import { useParams, Outlet } from "react-router-dom";
-import caseStudies from "data/caseStudies";
+
 import CaseStudyLink from "components/CaseStudyLink";
-import Project from "components/Project";
+
 
 const Works = () => {
     const { workName } = useParams();
@@ -47,3 +73,5 @@ const Works = () => {
 };
 
 export default Works;
+
+*/
