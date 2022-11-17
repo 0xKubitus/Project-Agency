@@ -22,8 +22,7 @@ function ChangeThemeButton() {
     //clicking the button must save to localStorage the 'theme' setting:
     localStorage.clear(); // we can do this to avoid overloading the localStorage in this case as it's the only data we store inside localStorage.
     localStorage.setItem("theme", JSON.stringify(theme));
-
-    console.log("localstorage =", localStorage.getItem("theme"));
+    // console.log("localstorage =", localStorage.getItem("theme"));
 
     return (
         <ThemeModeBtnContainer>

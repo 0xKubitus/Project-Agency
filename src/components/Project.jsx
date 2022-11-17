@@ -13,13 +13,14 @@ const Project = () => {
 
     return (
         <>
-            <div>
-                <p>rendu projet à afficher ici :</p>
+            <div style={{ border: "1px solid red" }}>
                 <h1>{work.name}</h1>
                 <h2>{work.subtitle}</h2>
                 <p>{work.text}</p>
             </div>
-            <Link to="/works">Go Back</Link>
+            <div style={{ marginTop: "20px" }}>
+                <Link to="/works">Go Back</Link>
+            </div>
         </>
     );
 };
