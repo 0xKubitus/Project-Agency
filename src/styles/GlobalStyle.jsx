@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import { createGlobalStyle } from 'styled-components';
-import { ThemeContext } from 'context/ThemeContext';
+import { useContext } from "react";
+import { createGlobalStyle } from "styled-components";
+import { ThemeContext } from "context/ThemeContext";
 
 const StyledGlobalStyle = createGlobalStyle`
     * {
@@ -11,22 +11,25 @@ const StyledGlobalStyle = createGlobalStyle`
 
     body {
         background-color: ${({ isDarkMode }) =>
-            isDarkMode ? 'black' : 'white'};
+            isDarkMode ? "#3a3a3a" : "#f2f3f4"};
         margin: 0;
     }
 
     a {
         font-weight: bold;
+        color: #e83535;
+        text-decoration: none;
     }
 
     // /* --------------------------------------------------------------------- */
     // /* BELOW STUFF IS TO BE REMOVED = ONLY USEFULL TO HELP FIND WHAT IS WHAT */
 
     .App {
+        height: 100vh;
         text-align: center;
         border: 1px solid black;
         margin: 2px 2px 2px 2px;
-        color: ${({ isDarkMode }) => (isDarkMode ? 'white' : 'black')};
+        color: ${({ isDarkMode }) => (isDarkMode ? "white" : "black")};
     }
 
     .navbar {
@@ -54,7 +57,7 @@ const StyledGlobalStyle = createGlobalStyle`
 function GlobalStyle() {
     const { theme } = useContext(ThemeContext);
 
-    return <StyledGlobalStyle isDarkMode={theme === 'dark'} />;
+    return <StyledGlobalStyle isDarkMode={theme === "dark"} />;
 }
 
 export default GlobalStyle;
