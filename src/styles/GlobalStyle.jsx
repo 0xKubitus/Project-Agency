@@ -18,12 +18,14 @@ const StyledGlobalStyle = createGlobalStyle`
     a {
         font-weight: bold;
         color: #e83535;
+        text-decoration: none;
     }
 
     // /* --------------------------------------------------------------------- */
     // /* BELOW STUFF IS TO BE REMOVED = ONLY USEFULL TO HELP FIND WHAT IS WHAT */
 
     .App {
+        height: 100vh;
         text-align: center;
         border: 1px solid black;
         margin: 2px 2px 2px 2px;

@@ -1,25 +1,30 @@
 import { useParams, Link } from "react-router-dom";
+import Showdown from "showdown";
 
 import caseStudies from "data/caseStudies";
 
+const converter = new Showdown.Converter();
+
 const Project = () => {
     const { workName } = useParams();
-
-    console.log(workName);
+    // console.log("workName:", workName);
 
     const work = caseStudies.find((project) => project.name === workName);
+    // console.log("work:", work);
 
-    console.log(work);
+    function createMarkup(object) {
+        return { __html: converter.makeHtml(object) };
+    }
 
     return (
         <>
             <div style={{ border: "1px solid red" }}>
                 <h1>{work.name}</h1>
-                <h2>{work.subtitle}</h2>
+                <div dangerouslySetInnerHTML={createMarkup(work.subtitle)}></div>
                 <p>{work.text}</p>
             </div>
             <div style={{ marginTop: "20px" }}>
-                <Link to="/works">Go Back</Link>
+                <Link to="/works">Go Back⏎</Link>
             </div>
         </>
     );

@@ -4,20 +4,34 @@ const Works = ({ caseStudies }) => {
     return (
         //  DOIT AFFICHER UN LIEN VERS CHAQUE 'CASE STUDY'
         // cf. => <CaseStudyLink />
-        <>
-            <ul>
-                {caseStudies.map((project) => (
-                    <li key={project.name}>
-                        <Link to={project.name}>
-                            {project.name} (lien à cliquer)
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+        <div>
+            <h2>Please navigate amongst our case-studies:</h2>
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "25vh",
+                }}
+            >
+                <ul>
+                    {caseStudies.map((project) => (
+                        <li
+                            key={project.name}
+                            style={{
+                                margin: "10px",
+                            }}
+                        >
+                            <Link to={project.name}>{project.name}</Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
             {/* QUAND ON CLICK UN LIEN, DOIT AFFICHER LE CONTENU DU CASE STUDY EN QUESTION
                  => <Project /> */}
             <Outlet />
-        </>
+        </div>
     );
 };
 
