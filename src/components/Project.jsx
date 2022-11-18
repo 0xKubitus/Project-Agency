@@ -1,9 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import Showdown from "showdown";
+import { createMarkup } from "helpers";
+// import Showdown from "showdown";
 
 import caseStudies from "data/caseStudies";
 
-const converter = new Showdown.Converter();
+// const converter = new Showdown.Converter();
 
 const Project = () => {
     const { workName } = useParams();
@@ -12,9 +13,9 @@ const Project = () => {
     const work = caseStudies.find((project) => project.name === workName);
     // console.log("work:", work);
 
-    function createMarkup(object) {
-        return { __html: converter.makeHtml(object) };
-    }
+    // function createMarkup(object) {
+    //     return { __html: converter.makeHtml(object) };
+    // }
 
     return (
         <>

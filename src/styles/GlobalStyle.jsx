@@ -25,7 +25,7 @@ const StyledGlobalStyle = createGlobalStyle`
     // /* BELOW STUFF IS TO BE REMOVED = ONLY USEFULL TO HELP FIND WHAT IS WHAT */
 
     .App {
-        height: 100vh;
+        min-height: 100vh;
         text-align: center;
         border: 1px solid black;
         margin: 2px 2px 2px 2px;
