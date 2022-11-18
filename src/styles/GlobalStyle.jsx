@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { createGlobalStyle } from "styled-components";
 import { ThemeContext } from "context/ThemeContext";
+import { CaseStudiesContext } from "context/CaseStudiesContext";
 
 const StyledGlobalStyle = createGlobalStyle`
     * {
@@ -55,6 +56,9 @@ const StyledGlobalStyle = createGlobalStyle`
 
 function GlobalStyle() {
     const { theme } = useContext(ThemeContext);
+    const mode = useContext(CaseStudiesContext);
+
+    console.log("mode in GlobalStyle =", mode);
 
     return <StyledGlobalStyle isDarkMode={theme === "dark"} />;
 }

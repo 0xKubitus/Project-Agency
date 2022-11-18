@@ -5,15 +5,16 @@ export const CaseStudiesContext = createContext("cards");
 
 export const DisplayModeProvider = ({ children }) => {
     // const [mode, setMode] = useState("list");
-    const [mode, setMode] = useState("cards");
+    // const [mode, setMode] = useState("cards");
+    const [displayMode, setDisplayMode] = useState("cards");
 
     const toggleDisplayMode = () => {
         console.log("toggled");
         // setMode(mode === "list" ? "cards" : "list");
-        setMode(mode === "cards" ? "list" : "cards");
+        setDisplayMode(displayMode === "cards" ? "list" : "cards");
 
-        console.log("mode =", mode);
+        console.log("displayMode =", displayMode);
     };
 
-    return <CaseStudiesContext.Provider value={{ mode, toggleDisplayMode }}>{children}</CaseStudiesContext.Provider>;
+    return <CaseStudiesContext.Provider value={{ displayMode, toggleDisplayMode }}>{children}</CaseStudiesContext.Provider>;
 };

@@ -1,12 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
-import { useContext, useEffect } from "react";
+// import { useContext, useState, useEffect } from "react";
 import { DisplayModeProvider, CaseStudiesContext } from "context/CaseStudiesContext";
 import ChangeDisplayModeButton from "components/ChangeDisplayModeButton";
 
-const Works = ({ caseStudies }) => {
-    const displayMode = useContext(CaseStudiesContext);
+const Works = ({ caseStudies, mode }) => {
+    // const displayMode = useContext(CaseStudiesContext);
+    // const [mode, setMode] = useState("");
 
-    // useEffect(() => {}, [displayMode]);
+    // console.log("displayMode in Works =", mode);
+
+    // useEffect(() => {
+    //     setMode(displayMode);
+    // }, [displayMode]);
 
     return (
         <DisplayModeProvider>
@@ -15,7 +20,7 @@ const Works = ({ caseStudies }) => {
                 <ChangeDisplayModeButton />
 
                 {/* SI 'mode' === 'list', AFFICHER CECI : */}
-                {displayMode === "list" ? (
+                {mode === "list" ? (
                     <div
                         style={{
                             display: "flex",
@@ -38,7 +43,7 @@ const Works = ({ caseStudies }) => {
                         </ul>
                     </div>
                 ) : (
-                    <div>displayMode = {displayMode}</div>
+                    <div>mode = {mode}</div>
                 )}
 
                 <Outlet />
