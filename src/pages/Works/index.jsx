@@ -1,10 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DisplayModeProvider, CaseStudiesContext } from "context/CaseStudiesContext";
 import ChangeDisplayModeButton from "components/ChangeDisplayModeButton";
 
 const Works = ({ caseStudies }) => {
     const displayMode = useContext(CaseStudiesContext);
+
+    // useEffect(() => {}, [displayMode]);
 
     return (
         <DisplayModeProvider>
