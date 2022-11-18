@@ -22,16 +22,10 @@ root.render(
                 <Header />
                 <div className="App">
                     <Routes>
-                        <Route
-                            path="/"
-                            element={<Home homepageText={homepageText} />}
-                        />
+                        <Route path="/" element={<Home homepageText={homepageText} />} />
                         <Route path="/about" element={<About />} />
 
-                        <Route
-                            path="/works"
-                            element={<Works caseStudies={caseStudies} />}
-                        >
+                        <Route path="/works" element={<Works caseStudies={caseStudies} />}>
                             <Route path=":workName" element={<Project />} />
                         </Route>
                     </Routes>

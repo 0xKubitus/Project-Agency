@@ -1,37 +1,36 @@
 import { Link, Outlet } from "react-router-dom";
+import { DisplayModeProvider } from "context/CaseStudiesContext";
 
 const Works = ({ caseStudies }) => {
     return (
-        //  DOIT AFFICHER UN LIEN VERS CHAQUE 'CASE STUDY'
-        // cf. => <CaseStudyLink />
-        <div>
-            <h2>Please navigate amongst our case-studies:</h2>
-            <div
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    height: "25vh",
-                }}
-            >
-                <ul>
-                    {caseStudies.map((project) => (
-                        <li
-                            key={project.name}
-                            style={{
-                                margin: "10px",
-                            }}
-                        >
-                            <Link to={project.name}>{project.name}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+        <DisplayModeProvider>
+            <div>
+                <h2>Please navigate amongst our case-studies:</h2>
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "25vh",
+                    }}
+                >
+                    <ul>
+                        {caseStudies.map((project) => (
+                            <li
+                                key={project.name}
+                                style={{
+                                    margin: "10px",
+                                }}
+                            >
+                                <Link to={project.name}>{project.name}</Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
 
-            {/* QUAND ON CLICK UN LIEN, DOIT AFFICHER LE CONTENU DU CASE STUDY EN QUESTION
-                 => <Project /> */}
-            <Outlet />
-        </div>
+                <Outlet />
+            </div>
+        </DisplayModeProvider>
     );
 };
 
