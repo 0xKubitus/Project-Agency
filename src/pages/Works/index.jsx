@@ -1,32 +1,43 @@
 import { Link, Outlet } from "react-router-dom";
-import { DisplayModeProvider } from "context/CaseStudiesContext";
+import { useContext } from "react";
+import { DisplayModeProvider, CaseStudiesContext } from "context/CaseStudiesContext";
+import ChangeDisplayModeButton from "components/ChangeDisplayModeButton";
 
 const Works = ({ caseStudies }) => {
+    const displayMode = useContext(CaseStudiesContext);
+
     return (
         <DisplayModeProvider>
             <div>
                 <h2>Please navigate amongst our case-studies:</h2>
-                <div
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        height: "25vh",
-                    }}
-                >
-                    <ul>
-                        {caseStudies.map((project) => (
-                            <li
-                                key={project.name}
-                                style={{
-                                    margin: "10px",
-                                }}
-                            >
-                                <Link to={project.name}>{project.name}</Link>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <ChangeDisplayModeButton />
+
+                {/* SI 'mode' === 'list', AFFICHER CECI : */}
+                {displayMode === "list" ? (
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            height: "25vh",
+                        }}
+                    >
+                        <ul>
+                            {caseStudies.map((project) => (
+                                <li
+                                    key={project.name}
+                                    style={{
+                                        margin: "10px",
+                                    }}
+                                >
+                                    <Link to={project.name}>{project.name}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ) : (
+                    <div>displayMode = {displayMode}</div>
+                )}
 
                 <Outlet />
             </div>

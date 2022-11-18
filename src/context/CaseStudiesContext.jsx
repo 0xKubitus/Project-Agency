@@ -6,6 +6,7 @@ export const DisplayModeProvider = ({ children }) => {
     const [mode, setMode] = useState("list");
 
     const toggleDisplayMode = () => {
+        console.log("toggled");
         setMode(mode === "list" ? "cards" : "list");
     };
 
