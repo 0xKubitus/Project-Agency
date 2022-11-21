@@ -99,6 +99,7 @@ The components created will be function components, and we will use `react-route
 
 3 other pages are expected (Platon, Solane and Sedal), one for each of the case studies. As you can imagine, these 3 pages are in fact one and the same component, in which we display different data depending on the URL. So it's dynamic routing.
 
+
 <br>
 
 # 4. Site Content
