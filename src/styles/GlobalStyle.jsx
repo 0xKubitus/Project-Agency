@@ -10,8 +10,7 @@ const StyledGlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: ${({ isDarkMode }) =>
-            isDarkMode ? "#3a3a3a" : "#f2f3f4"};
+        background-color: ${({ isDarkMode }) => (isDarkMode ? "#3a3a3a" : "#f2f3f4")};
         margin: 0;
     }
 
@@ -21,13 +20,28 @@ const StyledGlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
-    // /* --------------------------------------------------------------------- */
-    // /* BELOW STUFF IS TO BE REMOVED = ONLY USEFULL TO HELP FIND WHAT IS WHAT */
+    .case-study-mode-toggler-container {
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .case-study-mode-toggler-btn {
+      border-radius: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 10px;
+      margin-left: 20px
+    }
 
     .App {
-        height: 100vh;
+        min-height: 90vh;
         text-align: center;
-        border: 1px solid black;
         margin: 2px 2px 2px 2px;
         color: ${({ isDarkMode }) => (isDarkMode ? "white" : "black")};
     }
@@ -36,22 +50,11 @@ const StyledGlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: space-around;
         margin: 2px 2px 2px 2px;
+        border-bottom: 1px solid black;
+        padding: 10px 0 10px 0;
     }
 
-    .page-content {
-        border: 1px solid green;
-        margin: 2px 2px 2px 2px;
-    }
 
-    .preview-title {
-        border: 1px solid orange;
-        margin: 2px 2px 2px 2px;
-    }
-
-    .markdown-preview {
-        border: 1px solid red;
-        margin: 2px 2px 2px 2px;
-    }
 `;
 
 function GlobalStyle() {
