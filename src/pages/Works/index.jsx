@@ -5,11 +5,12 @@ import DisplayList from "components/DisplayList";
 import DisplayCards from "components/DisplayCards";
 import ChangeDisplayModeButton from "components/ChangeDisplayModeButton";
 
-const Works = ({ caseStudies, mode }) => {
+const Works = ({ caseStudies }) => {
     const displayMode = useContext(CaseStudiesContext);
-    // const [mode, setMode] = useState("");
+    console.log("displayMode in Works =", displayMode);
 
-    // console.log("displayMode in Works =", mode);
+    const [mode, setMode] = useState(displayMode);
+    console.log("'mode' state in Works/index.jsx =", mode);
 
     // useEffect(() => {
     //     setMode(displayMode);
@@ -20,10 +21,10 @@ const Works = ({ caseStudies, mode }) => {
             <div>
                 <h2>Please navigate amongst our case-studies:</h2>
 
-                <DisplayList caseStudies={caseStudies} />
-                <DisplayCards caseStudies={caseStudies} />
+                {mode === "list" && <DisplayList caseStudies={caseStudies} />}
+                {mode === "cards" && <DisplayCards caseStudies={caseStudies} />}
 
-                <ChangeDisplayModeButton />
+                <ChangeDisplayModeButton mode={mode} toggle={setMode} />
             </div>
         </DisplayModeProvider>
 

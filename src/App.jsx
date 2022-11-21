@@ -18,10 +18,10 @@ import { ThemeProvider } from "context/ThemeContext";
 import GlobalStyle from "styles/GlobalStyle";
 
 const App = () => {
-    const displayMode = useContext(CaseStudiesContext);
     // const [mode, setMode] = useState("");
-
     // console.log("displayMode in App =", mode);
+
+    // const displayMode = useContext(CaseStudiesContext);
 
     // useEffect(() => {
     //     setMode(displayMode);
@@ -38,7 +38,7 @@ const App = () => {
                             <Route path="/" element={<Home homepageText={homepageText} />} />
                             <Route path="/about" element={<About aboutPageText={aboutPageText} />} />
 
-                            <Route path="/works" element={<Works workPageText={workPageText} caseStudies={caseStudies} mode={displayMode} />}>
+                            <Route path="/works" element={<Works workPageText={workPageText} caseStudies={caseStudies} /*mode={displayMode}*/ />}>
                                 <Route path=":workName" element={<Project />} />
                             </Route>
                         </Routes>
