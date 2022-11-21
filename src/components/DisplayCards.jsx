@@ -1,35 +1,37 @@
-import { Link, Outlet } from "react-router-dom";
 import { createMarkup } from "helpers";
-// import Showdown from "showdown";
-
-// const converter = new Showdown.Converter();
 
 const DisplayCards = ({ caseStudies }) => {
-    // function createMarkup(object) {
-    //     return { __html: converter.makeHtml(object) };
-    // }
-
     return (
         <div
             style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                // height: "25vh",
             }}
         >
-            <section>
+            <section
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}
+            >
                 {caseStudies.map((project) => (
                     <div
                         key={project.name}
                         style={{
-                            margin: "10px",
+                            margin: "20px",
                         }}
                     >
-                        {/* <h2>{project.name}</h2>
-                        <p>yo</p> */}
-                        <div style={{ border: "1px solid red" }}>
-                            <h1>{project.name}</h1>
+                        <div style={{ border: "1px solid red", height: "300px", minWidth: "250px", maxWidth: "400px", padding: "15px" }}>
+                            <h1
+                                style={{
+                                    color: "orange",
+                                    lineHeight: "10px",
+                                }}
+                            >
+                                {project.name}
+                            </h1>
                             <div dangerouslySetInnerHTML={createMarkup(project.subtitle)}></div>
                             <p>{project.text}</p>
                         </div>

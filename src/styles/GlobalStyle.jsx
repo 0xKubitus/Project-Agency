@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { createGlobalStyle } from "styled-components";
 import { ThemeContext } from "context/ThemeContext";
-import { CaseStudiesContext } from "context/CaseStudiesContext";
 
 const StyledGlobalStyle = createGlobalStyle`
     * {
@@ -21,13 +20,28 @@ const StyledGlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
 
-    // /* --------------------------------------------------------------------- */
-    // /* BELOW STUFF IS TO BE REMOVED = ONLY USEFULL TO HELP FIND WHAT IS WHAT */
+    .case-study-mode-toggler-container {
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .case-study-mode-toggler-btn {
+      border-radius: 25px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 10px;
+      margin-left: 20px
+    }
 
     .App {
-        min-height: 100vh;
+        min-height: 90vh;
         text-align: center;
-        border: 1px solid black;
         margin: 2px 2px 2px 2px;
         color: ${({ isDarkMode }) => (isDarkMode ? "white" : "black")};
     }
@@ -36,29 +50,15 @@ const StyledGlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: space-around;
         margin: 2px 2px 2px 2px;
+        border-bottom: 1px solid black;
+        padding: 10px 0 10px 0;
     }
 
-    .page-content {
-        border: 1px solid green;
-        margin: 2px 2px 2px 2px;
-    }
 
-    .preview-title {
-        border: 1px solid orange;
-        margin: 2px 2px 2px 2px;
-    }
-
-    .markdown-preview {
-        border: 1px solid red;
-        margin: 2px 2px 2px 2px;
-    }
 `;
 
 function GlobalStyle() {
     const { theme } = useContext(ThemeContext);
-    const mode = useContext(CaseStudiesContext);
-
-    // console.log("mode in GlobalStyle =", mode);
 
     return <StyledGlobalStyle isDarkMode={theme === "dark"} />;
 }

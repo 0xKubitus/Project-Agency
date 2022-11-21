@@ -1,18 +1,15 @@
-import { useContext } from "react";
-import { CaseStudiesContext } from "context/CaseStudiesContext";
-
 function ChangeDisplayModeButton(props) {
     const mode = props.mode;
-    // const { toggleDisplayMode, displayMode } = useContext(CaseStudiesContext);
-    // console.log("displayMode in ChangeDisplayModeButton =", displayMode);
 
     return (
-        <div>
-            <p>
-                <span>Cards </span> ⇄ <span> List</span>
-            </p>
-            {/* <button onClick={() => toggleDisplayMode()}>🔃 Toggle case-studies Display Mode</button> */}
-            <button onClick={() => props.toggle(mode === "cards" ? "list" : "cards")}>🔃 Toggle case-studies Display Mode</button>
+        <div className="case-study-mode-toggler-container">
+            <p style={{ fontSize: 18 }}>🔄 Toggle case-studies Display Mode:</p>
+
+            <button className="case-study-mode-toggler-btn" onClick={() => props.toggle(mode === "cards" ? "list" : "cards")}>
+                <p>
+                    <span>Cards </span> ⇄ <span> List</span>
+                </p>
+            </button>
         </div>
     );
 }
