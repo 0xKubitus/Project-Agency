@@ -101,7 +101,7 @@ The components created will be function components, and we will use `react-route
 
 <br>
 
-#4. Site Content
+# 4. Site Content
 
 ## "Home" page (url `/`)
 
