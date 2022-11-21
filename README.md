@@ -186,8 +186,6 @@ CLIQUER POUR LIRE LES CONSIGNES DE THE HACKING PROJECT POUR CE PROJET (en  Fran√
 </summary>
 <br>
 
-# 1. INTRODUCTION
-
 # 1. Introduction
 
 Tu es en charge du prototypage du nouveau site d'une entreprise.  
